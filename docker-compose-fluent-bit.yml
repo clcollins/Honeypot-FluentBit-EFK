@@ -1,0 +1,23 @@
+version: '3'
+services:
+  fluentd:
+    # Fluent logs to stdout by default
+    # change this in the conf file.
+    # Conf file: /fluent-bit/etc/fluent-bit.conf
+    image: fluent/fluent-bit
+    ports:
+      - "24224:24224"
+      - "24224:24224/udp"
+
+  cowrie:
+    logging:
+      driver: fluentd
+      options:
+        fluentd-address: localhost:24224
+        tag: efk.kibana
+    image: cowrie/cowrie
+    ports:
+      - "22:2222"
+      - "23:2223"
+    depends_on:
+      - fluentd

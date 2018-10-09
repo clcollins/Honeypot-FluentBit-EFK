@@ -1,0 +1,14 @@
+version: '3'
+  cowrie:
+    logging:
+      driver: fluentd
+      options:
+        fluentd-address: localhost:24224
+        tag: efk.kibana 
+    network_mode: host
+    image: cowrie/cowrie  
+    ports:
+      - "22:2222"
+      - "23:2223"
+    depends_on: 
+      - fluentd

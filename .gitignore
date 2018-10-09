@@ -1,0 +1,6 @@
+*key
+*crt
+*csr
+*pem
+*swp
+.devel/elasticsearch/data/nodes
