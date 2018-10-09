@@ -2,6 +2,22 @@
 
 Proof of concept architecture for forwarding honeypot data to an EFK (Elasticsearch, Fluentd, Kibana) stack with Fluentd or FluentBit, using Docker  containers.
 
+<!--lint disable list-item-indent-->
+<!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
+
+- [Honeypot -> FluentBit -> EFK](#honeypot-fluentbit-efk)
+	- [What are the things?](#what-are-the-things)
+	- [How would this be used?](#how-would-this-be-used)
+	- [What would I change?](#what-would-i-change)
+	- [Cool FluentBit option](#cool-fluentbit-option)
+	- [Gotchas](#gotchas)
+	- [Future consideration](#future-consideration)
+	- [Compatibility](#compatibility)
+	- [Acknowledgments](#acknowledgments)
+
+<!-- /TOC -->
+<!--lint enable list-item-indent-->
+
 ## What are the things?
 
 1.  docker-compose-efk.yml - EFK Stack POC
