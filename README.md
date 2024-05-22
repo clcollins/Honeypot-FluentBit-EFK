@@ -1,3 +1,5 @@
+#This repository is archived and will no longer receive updates.
+
 # Honeypot -> FluentBit -> EFK
 
 Proof of concept architecture for forwarding honeypot data to an EFK (Elasticsearch, Fluentd, Kibana) stack with Fluentd or FluentBit, using Docker  containers.
